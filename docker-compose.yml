@@ -9,10 +9,20 @@ services:
       - ./.env
     volumes: 
       - frontend:/home/srcs/
-    expose:
-      - 80:3000
     ports:
       - 80:3000
+  
+  backend:
+    image: back
+    container_name: nestjs
+    build: requirements/backend/
+    env_file:
+      - ./.env
+    volumes:
+      - backend:/home/srcs/
+    expose:
+      - 3001
+
 
 volumes:
   frontend:
@@ -21,3 +31,9 @@ volumes:
       type: none
       o: bind
       device: ${HOME}/Desktop/workshop/service1/requirements/frontend/srcs
+  backend:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${HOME}/Desktop/workshop/service1/requirements/backend/srcs
