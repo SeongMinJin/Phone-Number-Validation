@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  frontend:
+    image: front
+    container_name: nextjs
+    build: requirements/frontend/
+    env_file:
+      - ./.env
+    volumes: 
+      - frontend:/home/srcs/
+    expose:
+      - 80:3000
+    ports:
+      - 80:3000
+
+volumes:
+  frontend:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${HOME}/Desktop/workshop/service1/requirements/frontend/srcs

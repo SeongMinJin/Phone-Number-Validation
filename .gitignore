@@ -1,0 +1,16 @@
+.env
+/requirements/frontend/srcs/node_modules
+/requirements/frontend/srcs/dist
+/requirements/backend/srcs/node_modules
+/requirements/backend/srcs/dist
+
+
+
+
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
