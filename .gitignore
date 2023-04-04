@@ -1,12 +1,19 @@
 .env
 /requirements/frontend/srcs/node_modules
 /requirements/frontend/srcs/dist
+/requirements/frontend/srcs/.vscode
+/requirements/frontend/srcs/.next
+/requirements/frontend/srcs/.DS_Store
+
+
 /requirements/backend/srcs/node_modules
 /requirements/backend/srcs/dist
+/requirements/backend/srcs/.vscode
+/requirements/backend/srcs/.DS_Store
 
 
 
-
+.DS_Store
 
 # IDE - VSCode
 .vscode/*
