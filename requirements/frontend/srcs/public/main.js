@@ -10,22 +10,3 @@ inputs.forEach((input, index) => {
 		}
 	})
 })
-
-// const button = document.querySelector('button');
-
-// button.addEventListener('click', search);
-
-// function search() {
-
-// 	fetch('http://localhost:3000/', {
-// 		headers: {
-// 			first: inputs[0].value,
-// 			middle: inputs[1].value,
-// 			last: inputs[2].value,
-// 		}
-// 	}).then((res) => {
-// 		console.log(res);
-// 	}).catch((err) => {
-// 		console.log(err);
-// 	});
-// }
