@@ -10,7 +10,7 @@ services:
     volumes: 
       - frontend:/home/srcs/
     ports:
-      - 80:3000
+      - 80:80
 
   backend:
     image: back
@@ -20,8 +20,8 @@ services:
       - ./.env
     volumes:
       - backend:/home/srcs/
-    expose:
-      - 3001
+    ports:
+      - 3001:3001
 
   db:
     image: postgres
@@ -46,16 +46,16 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: ${HOME}/Desktop/workshop/service1/requirements/frontend/srcs
+      device: /home/ec2-user/fiwejksdbvkjwqbqfuoshdbjkca/requirements/frontend/srcs
   backend:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: ${HOME}/Desktop/workshop/service1/requirements/backend/srcs
+      device: /home/ec2-user/fiwejksdbvkjwqbqfuoshdbjkca/requirements/backend/srcs
   db:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: ${HOME}/Desktop/workshop/service1/requirements/db/srcs
+      device: /home/ec2-user/fiwejksdbvkjwqbqfuoshdbjkca/requirements/db/srcs
