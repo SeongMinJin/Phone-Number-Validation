@@ -16,16 +16,16 @@ export class SearchService {
 
 
 	async search(number: string) {
-		// const result = await fetch(`https://api.apilayer.com/number_verification/validate?number=+82${number.substring(1)}`, {
-		// 	method: "GET",
-		// 	headers: {
-		// 		apikey: "RisW7Sm33iFiecT3381KLBrUCyhr5cpx",
-		// 	}
-		// })
-		// .then(response => response.json())
-		// .then(result => {
-		// 	return result;
-		// })
+		const result = await fetch(`https://api.apilayer.com/number_verification/validate?number=+82${number.substring(1)}`, {
+			method: "GET",
+			headers: {
+				apikey: "RisW7Sm33iFiecT3381KLBrUCyhr5cpx",
+			}
+		})
+		.then(response => response.json())
+		.then(result => {
+			return result;
+		})
 
 		const newSearch = this.searchRepository.create({
 			date: new Date(Date.now()),
@@ -36,7 +36,7 @@ export class SearchService {
 		await this.searchRepository.insert(newSearch);
 		const phone = await this.phoneService.findOne(number);
 		return ({
-			result: undefined,
+			result: result,
 			searchCount: phone.search_count,
 			search: phone.search,
 			reportCount: phone.report_count,

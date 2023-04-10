@@ -29,8 +29,16 @@ export class PhoneService {
 			relations: {
 				search: true,
 				report: true,
-			}
-		})
+			},
+			order: {
+				search: {
+					date: "DESC",
+				},
+				report: {
+					date: "DESC",
+				},
+			},
+		});
 		return phone;
 	}
 
