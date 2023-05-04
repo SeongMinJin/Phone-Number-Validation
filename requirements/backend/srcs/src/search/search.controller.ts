@@ -10,7 +10,6 @@ export class SearchController {
 
 	@Get(':number')
 	async search(@Param('number') number) {
-		console.log('here?!');
 		return await this.searchService.search(number);
 	}
 }
