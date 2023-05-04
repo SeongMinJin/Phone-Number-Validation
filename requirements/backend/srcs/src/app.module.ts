@@ -10,7 +10,7 @@ import { ReportModule } from './report/report.module';
   imports: [
 		TypeOrmModule.forRoot({
 			type: 'postgres',
-      host: 'localhost',
+      host: 'db',
       port: 5432,
       username: 'postgres',
       password: 'alsdl12',
