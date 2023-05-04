@@ -46,16 +46,16 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/ec2-user/fiwejksdbvkjwqbqfuoshdbjkca/requirements/frontend/srcs
+      device: /home/seojin/fiwejksdbvkjwqbqfuoshdbjkca/requirements/frontend/srcs
   backend:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/ec2-user/fiwejksdbvkjwqbqfuoshdbjkca/requirements/backend/srcs
+      device: /home/seojin/fiwejksdbvkjwqbqfuoshdbjkca/requirements/backend/srcs
   db:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/ec2-user/fiwejksdbvkjwqbqfuoshdbjkca/requirements/db/srcs
+      device: /home/seojin/fiwejksdbvkjwqbqfuoshdbjkca/requirements/db/srcs

@@ -1,4 +1,4 @@
-# .env
+.env
 /requirements/frontend/srcs/node_modules
 /requirements/frontend/srcs/dist
 /requirements/frontend/srcs/.vscode
