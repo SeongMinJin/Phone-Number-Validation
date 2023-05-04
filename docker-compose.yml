@@ -11,6 +11,7 @@ services:
       - frontend:/home/srcs/
     ports:
       - 80:80
+    restart: always
 
   backend:
     image: back
@@ -22,6 +23,7 @@ services:
       - backend:/home/srcs/
     ports:
       - 3001:3001
+    restart: always
 
   db:
     image: postgres
