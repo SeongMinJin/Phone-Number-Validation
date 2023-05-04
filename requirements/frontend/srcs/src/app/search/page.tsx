@@ -38,7 +38,7 @@ export default function Search({
 	useEffect(() => {
 		const dataFetch = async (n: string) => {
 			const result = await (
-				await fetch(`http://3.17.204.137:3001/search/${n}`)
+				await fetch(`http://localhost:3001/search/${n}`)
 			).json();
 			setComponent(<Static valid={result.result.valid} carrier={result.result.carrier} search={result.search} searchCount={result.searchCount} report={result.report} reportCount={result.reportCount} />);
 			setState(true);
@@ -155,6 +155,7 @@ function Static({ valid, carrier, searchCount, search, reportCount, report } : {
 		</>
 	);
 }
+
 
 
 function parseData(data: {

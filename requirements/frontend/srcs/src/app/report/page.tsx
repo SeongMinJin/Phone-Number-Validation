@@ -9,7 +9,7 @@ export default function Report({
 }) {
 	const { number } = searchParams;
 
-	fetch(`http://3.17.204.137:3001/report/${number}`);
+	fetch(`http://localhost:30001report/${number}`);
 
 	return (
 		<div className=" min-h-screen flex justify-center items-center">
