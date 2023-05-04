@@ -6,4 +6,4 @@ then
 	ln -s /home/node_modules /home/srcs/node_modules
 fi
 
-npm run dev -p 80
+npm run dev
