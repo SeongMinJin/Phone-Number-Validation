@@ -38,7 +38,7 @@ export default function Search({
 	useEffect(() => {
 		const dataFetch = async (n: string) => {
 			const result = await (
-				await fetch(`http://nextjs:3001/search/${n}`)
+				await fetch(`http://nestjs:3001/search/${n}`)
 			).json();
 			setComponent(<Static valid={result.result.valid} carrier={result.result.carrier} search={result.search} searchCount={result.searchCount} report={result.report} reportCount={result.reportCount} />);
 			setState(true);
